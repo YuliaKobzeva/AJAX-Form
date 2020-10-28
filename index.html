@@ -13,7 +13,13 @@
         <input type="text" class="form__input input__short" id="name" placeholder="Имя">
         <input type="text" class="form__input input__short" id="patronymic" placeholder="Отчество">
         <input type="text" class="form__input input__long" id="phone" placeholder="Телефон">
-        <input type="text" class="form__input input__long" id="country" placeholder="Страна">
+         <select id="country" onchange="className='blackfont'">
+          <option selected disabled>Страна</option>
+          <option value="Thailand">Тайланд</option>
+          <option value="Indonesia">Индонезия</option>
+          <option value="Malaysia">Малайзия</option>
+          <option value="Vietnam">Вьетнам</option>
+       </select>
         <button type="submit" class="form__button">отправить</button>
       </div>
     </form>

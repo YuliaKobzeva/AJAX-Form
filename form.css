@@ -13,18 +13,15 @@
   padding: 0 0.5rem;
 }
 
-
-
-
 .input__short {
   width: 30%;
 }
 
-.input__long {
+.input__long, select {
   width: 40%;
 }
 
-.form__input {
+.form__input, select {
   height: 1.5rem;
   margin-bottom: 1.5rem;
   padding-left: 0.4rem;
@@ -49,7 +46,24 @@
 
 }
 
-@media (max-width: 767px) {
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: transparent;
+  color :grey;
+
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.blackfont {
+  color:black
+}
+
+@media (max-width: 767px), (max-width: 992px) {
   .form {
     max-width: none;
     max-height: none;
@@ -64,7 +78,7 @@
     align-items: center;
 
   }
-  .input__short, .input__long {
+  .input__short, .input__long, select {
     width: 95%;
   }
 
