@@ -1,34 +1,10 @@
-/*LOADER*/
-.lds-dual-ring {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-}
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 4px;
-  border-radius: 50%;
-  border: 6px solid #4287f5;
-  border-color:#4287f5 transparent #4287f5 transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
-}
-@keyframes lds-dual-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 .form {
   max-width: 25rem;
   height: 10rem;
   border: 1px solid #383838;
   padding: 1rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form-container {
@@ -53,6 +29,7 @@
   padding-left: 0.4rem;
   box-sizing: border-box;
   font-size: 11px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form__button {
@@ -65,12 +42,15 @@
   border: 1px solid #383838;
   padding: 0.3rem;
   font-size: 10px;
+  font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
 
 }
+
+
 
 select {
   -webkit-appearance: none;
@@ -88,6 +68,43 @@ select::-ms-expand {
 .blackfont {
   color:black
 }
+
+.ok-message {
+  width: 98%;
+  color: #000000;
+  background-color: #52d981;
+  font-size: 13px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+/*LOADER*/
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0px;
+  border-radius: 50%;
+  border: 6px solid #4287f5;
+  border-color:#4287f5 transparent #4287f5 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*MEDIA REQUEST*/
 
 @media (max-width: 767px), (max-width: 992px) {
   .form {
@@ -113,6 +130,11 @@ select::-ms-expand {
     margin-top: 0;
   }
 
+  .ok-message {
+    width: 94%;
+  }
+
  }
+
 
 

@@ -1,8 +1,20 @@
 const form = document.querySelector(".form");
 const contentWrapper = document.querySelector('.form-container');
 const buttonSubmit = document.querySelector('.form__button');
+
 const loader = document.createElement('div');
 loader.classList.add('lds-dual-ring');
+
+okMessage = document.createElement('div');
+okMessage.classList.add('ok-message');
+okMessage.textContent = "Форма успешно отправлена!";
+
+function afterResponse() {
+  contentWrapper.removeChild(loader);
+  contentWrapper.appendChild(okMessage);
+  console.log("прошло 3 секунды")
+}
+
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -14,9 +26,7 @@ form.addEventListener('submit', (e) => {
   .then(response => response.text())
   .then(response => {
     if (response) {
-      setTimeout(() => {
-        console.log("прошло 3 секунды")
-      }, 3000);
+      setTimeout(afterResponse, 3000);
     }
   })
   .catch(error => console.error(error));
@@ -26,3 +36,5 @@ form.addEventListener('submit', (e) => {
 
 
 });
+
+/*поля, обязательный для заполнения + статусы ответов*/
