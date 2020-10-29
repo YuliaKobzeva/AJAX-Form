@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="form.css"></link>
 	</head>
 	<body>
-    <form class="form"action="https://localhost/form" method="post">
+    <form class="form">
+    <!-- <form class="form"action="https://localhost/form" method="post"> пункт №1 про отправку post-запроса без js-->
       <div class="form-container">
-        <input type="text" class="form__input input__short" id="surname" placeholder="Фамилия">
-        <input type="text" class="form__input input__short" id="name" placeholder="Имя">
-        <input type="text" class="form__input input__short" id="patronymic" placeholder="Отчество">
-        <input type="text" class="form__input input__long" id="phone" placeholder="Телефон">
-         <select id="country" onchange="className='blackfont'">
+        <input type="text" class="form__input input__short" name="surname" placeholder="Фамилия">
+        <input type="text" class="form__input input__short" name="name" placeholder="Имя">
+        <input type="text" class="form__input input__short" name="patronymic" placeholder="Отчество">
+        <input type="text" class="form__input input__long" name="phone" placeholder="Телефон">
+         <select name="country" onchange="className='blackfont'">
           <option selected disabled>Страна</option>
           <option value="Thailand">Тайланд</option>
           <option value="Indonesia">Индонезия</option>
