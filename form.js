@@ -17,7 +17,7 @@ function afterResponse() {
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const formData = JSON.stringify(new FormData(form)); /*сериализация данных формы в JSON*/
-	fetch("https://localhost/form", {
+	fetch("https://jsonplaceholder.typicode.com/posts", {
 		method: "post",
 		body: formData,
 	})
