@@ -16,10 +16,14 @@ function afterResponse() {
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
-	const formData = JSON.stringify(new FormData(form)); /*сериализация данных формы в JSON*/
+	const formData = new FormData(form);
+	const formDataObject = {};
+	formData.forEach((value, key) =>
+		formDataObject[key] = value);
+
 	fetch("https://jsonplaceholder.typicode.com/posts", {
 		method: "post",
-		body: formData,
+		body: JSON.stringify(formDataObject),
 	})
 		.then((response) => response.text())
 		.then((response) => {
